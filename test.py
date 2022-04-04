@@ -1,2 +1,2 @@
-print(ord("A"))
-print(ord("a"))
+print(int((ord("D")-65)/3)+3)
+

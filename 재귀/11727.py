@@ -1,7 +1,6 @@
 n = int(input())
-
+ 
 def hanoi(n, rod1, rod3, rod2):
-
 
     if n ==1 :
         print(rod1, rod3)
@@ -13,5 +12,5 @@ def hanoi(n, rod1, rod3, rod2):
 
         hanoi(n-1, rod2, rod3, rod1)
 
-print(n**2-1)
+print(2**n-1)
 hanoi(n,1,3,2)

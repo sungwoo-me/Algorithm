@@ -19,6 +19,3 @@ for i in range(len(cost)):
 
 print(result)
 
-
-print(dis)
-print(cost)

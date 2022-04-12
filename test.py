@@ -1,9 +1,10 @@
-def test(x,y) :
-    x.append(1)
-    y=y+6
+import sys
+input = sys.stdin.readline
 
-x= []
-y= 10
+a = int(input())
 
-test(x,y)
-print(x,y)
+print(a)
+print(type(a))
+
+for i in range(a):
+    print("아")

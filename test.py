@@ -1,3 +1,9 @@
-n = [1,3,4,5,2,10,6]
-n2 = set(n)
-print(n2)
+def test(x,y) :
+    x.append(1)
+    y=y+6
+
+x= []
+y= 10
+
+test(x,y)
+print(x,y)

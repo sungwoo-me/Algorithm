@@ -1,3 +1,5 @@
+import sys 
+input = sys.stdin.readline
 N=int(input())
 
 nums = []
@@ -6,6 +8,5 @@ for i in range(N):
 
 nums.sort(key = lambda x:[x[0],x[1]])
 
-print(nums)
 for i in nums :
     print(*i)

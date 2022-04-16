@@ -9,4 +9,5 @@ for i in range(N):
 
 nums.sort(key=lambda x:[x[1],x[0]])
 
-print(nums)
+for i in nums :
+    print(*i)

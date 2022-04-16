@@ -8,8 +8,9 @@ def bfs(graph, start, visited):
     # 큐가 빌 때 까지 반복 
     while queue :
         # 큐에서 하나의 원소를 뽑아 출력하기
+        print(queue)
         v = queue.popleft()
-        print(v,end='')
+        print(v)
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
@@ -17,14 +18,11 @@ def bfs(graph, start, visited):
 
 graph = [
     [],
-    [2,3,8],
-    [1,7],
-    [1,4,5],
-    [3,5],
-    [3,4],
-    [7],
-    [2,6,8],
-    [1,7]
+    [2,4,5],
+    [1,3],
+    [2],
+    [1],
+    [1]
 ]
 
 visited = [False] * 9

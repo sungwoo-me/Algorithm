@@ -23,7 +23,6 @@ for i in range(N):
 most_result= []
 mid_true =True
 
-print(most_num)
 for i in range(len(most_nums)) :
     if most_nums[i]==0 :
         continue

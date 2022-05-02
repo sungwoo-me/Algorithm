@@ -25,14 +25,12 @@ def solution(answers):
 
     max_sol = max(answer)
 
-    print(max_sol)
 
     result = []
     for i in range(len(answer)) :
-        print(max_sol,answer[i])
         if answer[i] == max_sol:
             result.append(i+1)
     
-    return print(result)
+    return result
 
 solution([1,2,3,4,5])

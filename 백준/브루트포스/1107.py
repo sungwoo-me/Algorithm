@@ -37,7 +37,6 @@ for i in range(0,500001):
         break
 
    
-print(result)
 
 
 if a == False :

@@ -17,7 +17,7 @@ for i in range(T) :
     for i in nums:
         if i== nums[0]:
             count +=1 
-        elif i[1] <a :
+        elif i[1] < temp :
             count+=1
             temp = i[1]
     

@@ -1,2 +1,4 @@
-a= list(2154)
-print(a)
+a = "abcde"
+b = "bc"
+if a in b :
+    print("sdfs")

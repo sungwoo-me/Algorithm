@@ -32,15 +32,22 @@ for k in sorted(rooms.keys()):
         print("Room " + k + ":")
 
         result = []
+
+        
         while que :
+            # 큐에서 1,2 번째 원소 빼기
             num1 = que.popleft()
+            # 9 면 09로 변환
             if num1[0]== 9 :
                 num1[0]="09"
+            # 만약 하나 남았다면 결과에 추가 시키고 종료하기
             if que :
                 num2 = que.popleft()
             else :
                 result.append(num1)
                 break
+
+            # 만약 두번째 원소 종료시간과 첫번째 시작시간이 같다면 합치고 추가하기
             if num1[1]==num2[0]:
                 que.appendleft([num1[0],num2[1]])
             else:

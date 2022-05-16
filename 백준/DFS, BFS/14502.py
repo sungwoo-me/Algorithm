@@ -1,5 +1,8 @@
 from collections import deque 
 from itertools import combinations
+import sys
+
+input = sys.stdin.readline
 
 dx = [0,0,1,-1]
 dy = [1,-1,0,0]

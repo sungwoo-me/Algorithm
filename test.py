@@ -1,60 +1,40 @@
-N, L , R = map(int,input().split())
+def solution(cards):
+    cards_len = len(cards)
+    visited = [False]*cards_len
+    answer = 0 
 
-dx = [0,0,1,-1]
-dy = [1,-1,0,0]
+    for i in range(cards_len) :
+        if visited[i] :
+            continue
+        min_card = min(cards[i])
+        min_card_i = cards[i].index(min_card)
 
+        for j in range(i,cards_len):
+            if visited[j] :
+                continue
 
-def dfs(x,y,num) :
-    global sum, cnt ,ok 
-    sum+=graph[x][y]
-    cnt +=1 
-    visited[x][y] = 1
-    visited2[x][y] = num
-    for a in range(4):
-        nx = x+dx[a] 
-        ny = y+dy[a]
-        if 0<=nx<N and 0<=ny<N and visited[nx][ny] == 0  and L<=abs(graph[nx][ny]-graph[x][y]) <=R :
-            ok = False
-            dfs(nx,ny,num)
-
-    return int(sum/cnt)
-
-graph = []
-visited = [[0]*N for _ in range(N)]
-visited2 = [[0]*N for _ in range(N)]
-num = 0
-nums = []
-count = 0
-
-for i in range(N):
-    graph.append(list(map(int,input().split())))
+            n_min_card = min(cards[j])
+            n_min_card_i = cards[j].index(n_min_card)            
 
 
-while True :
-    
-    ok = True
-    for i in range(N):
-        for j in range(N):
-            sum = 0
-            cnt = 0 
-            num+=1 
-            if visited[i][j] == 0:
-                avg = dfs(i,j,num)
 
-                nums.append([num,avg])
+            if n_min_card_i != min_card_i and min_card != 0 and n_min_card != 0:
+                if min_card != cards[i][n_min_card_i]-1 and n_min_card != cards[j][min_card_i]-1 :
+                    cards[i][min_card_i]+=1
+                    cards[j][min_card_i]-=1
 
-    if ok :
-        break
-    
+                    cards[i][n_min_card_i]-=1
 
-    for n,s in nums:
-        for i in range(N):
-            for j in range(N):
-                if visited2[i][j]== n :
-                    visited[i][j]=0
-                    graph[i][j]=s
+                    
+                    cards[j][n_min_card_i]+=1
 
-    
-    count +=1 
+                    visited[i] = True
+                    visited[j] = True
+                    break 
 
-print(count)
+    print(cards)
+    for i in cards :
+        answer += min(i)
+
+
+    return answer

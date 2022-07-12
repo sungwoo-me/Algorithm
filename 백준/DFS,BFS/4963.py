@@ -27,7 +27,5 @@ while(True):
             if graph[i][j] == 1 and visited[i][j]:
                 result+=1  
                 dfs(i,j)
-    print("-----------------------")
     print(result)
-    print("======================")
 

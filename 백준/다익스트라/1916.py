@@ -17,9 +17,12 @@ def dijkstra(start):
         if distance[node] < dist :
             continue 
 
+        # 그래프에서 이어지는 노드들 정보 빼오기 
         for i in graph[node] :
+            # 거리 추가하기 
             cost = dist + i[1]
           
+            # 만약 추가한 거리가 현재 있는 거리보다 짧다면 초기화 후 큐에 넣기 
             if cost < distance[i[0]] :
                 distance[i[0]] = cost
                 heapq.heappush(q,[cost,i[0]])

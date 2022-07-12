@@ -1,0 +1,60 @@
+
+T = int(input())
+for test_case in range(1, T + 1):
+    print(1)
+    N = int(input())
+    print(1)
+    nums = list(map(int,input().split()))
+    h_count = 0
+    z_count = 0
+    count = 0
+    if N == 1 :
+        print(0)
+        continue
+
+    for i in range(N) :
+        if nums[i] % 2 == 0:
+            z_count+=1
+            nums[i]= 0
+        else :
+            h_count+=1
+            nums[i]= 1
+
+    if N%2 == 0 and z_count != h_count :
+        print(-1)
+        continue
+
+    if N%2 != 0 and abs(z_count-h_count) > 1:
+        print(-1)
+        continue
+
+    while(True) :
+        TF = True
+        for i in range(N-1):
+            c_num1 = nums[i+1]
+            c_num2 = nums[i]
+            if c_num1 != c_num2 :
+                continue
+            else :
+                if i+2 < N and nums[i+2] != c_num1:
+
+                    nums[i+1] = nums[i+2]
+                    nums[i+2] = c_num2
+                    count+=1
+                    TF = False
+                    break
+
+                if i - 2 >= 0 and nums[i - 2] != c_num1 :
+                    nums[i - 1] = nums[i - 2]
+                    nums[i - 2] = c_num2
+                    count += 1
+                    TF = False
+                    break
+
+        print(nums)
+        if TF :
+            break
+
+
+    print("#%d" % test_case , count)
+

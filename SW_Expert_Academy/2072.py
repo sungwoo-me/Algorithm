@@ -7,4 +7,4 @@ for j in range(N):
         if i%2 != 0 :
             sum +=i 
     
-    print("#"+str(j),sum)
+    print("#"+str(j+1),sum)

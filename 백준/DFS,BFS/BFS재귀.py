@@ -1,5 +1,6 @@
 from collections import deque 
 
+
 def bfs(graph, start, visited):
     # 큐 구현을 위해 deque 사용
     queue = deque([start])
@@ -15,6 +16,7 @@ def bfs(graph, start, visited):
             if not visited[i]:
                 queue.append(i)
                 visited[i]=True
+
 
 graph = [
     [],

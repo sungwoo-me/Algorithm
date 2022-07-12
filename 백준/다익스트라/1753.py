@@ -14,18 +14,17 @@ def dijkstra(start) :
         dist , node = heapq.heappop(q)
         # 만약 방문한 적이 있는 노드라면 패스
         
-        # if distance[node] < dist :
-        #     continue
+        if distance[node] < dist :
+            continue
 
-        if visited[node] :
-            continue 
+        # if visited[node] :
+        #     continue 
         
-        visited[node] = True 
+        # visited[node] = True 
 
         # 아직 방문하지 않은 노드라면 
         for i in graph[node]:
-            cost = dist + i[1] 
-
+            cost = dist + i[1]   
             if cost < distance[i[0]] :
                 distance[i[0]] = cost
                 heapq.heappush(q,[cost,i[0]])
@@ -41,7 +40,7 @@ K = int(input())
 # 노드 정보 받는 리스트 
 graph = [[] for _ in range(V+1)]
 # 방문 정보 입력 :
-visited = [False] * (V+1)
+# visited = [False] * (V+1)
 # 거리 입력 리스트 
 distance = [INF] * (V+1)
 

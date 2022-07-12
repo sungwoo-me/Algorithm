@@ -1,4 +1,4 @@
 print("""\    /\\
  )  ( ')
 (  /  )
- \(__)|""")dsfsd  fsdff sdffdsffsdfsdfdsfsfsdfsdfsfsdfsddf
+ \(__)|""") ㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇ

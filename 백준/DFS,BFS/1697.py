@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**9)
+input = sys.stdin.readline
 def dfs(start):
     visited[start] = False 
     for i in graph[start] :

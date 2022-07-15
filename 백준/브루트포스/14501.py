@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
+
 data = [0 for _ in range(n)]
 for i in range(n):
     time, cost = map(int, input().split())
@@ -14,8 +15,6 @@ def dfs(now,profit):
     global result 
     
     # print(data[now],result,profit)
-
-
     if data[now] == 0 :
         result = max(result,profit)
         return 

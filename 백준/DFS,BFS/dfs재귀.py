@@ -30,4 +30,4 @@ print(graph2)
 visited = [False] * 9
 
 
-dfs(graph, 1, visited)
+dfs(graph2, 1, visited)

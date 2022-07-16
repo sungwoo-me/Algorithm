@@ -13,7 +13,6 @@ for i in range(n,-1,-1):
         break
     elif count[2] :
         for j in range(n,-1,-1):
-            
             if i**2 + j**2 > N:
                 continue
 

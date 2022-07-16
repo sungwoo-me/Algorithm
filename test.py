@@ -2,4 +2,5 @@ import abc
 
 
 num = abc
-num[1] = "k"
+num.append("d")
+print(num)

@@ -13,7 +13,7 @@ def bfs(start):
         for i in graph[now]:
             if not visited[i] :
                 que.append([i,count])
-        
+                visited[i] = True
     return -1
 
 

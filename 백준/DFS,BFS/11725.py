@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**5)
 def dfs(start):
     visited[start] = True
     for i in graph[start]:

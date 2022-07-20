@@ -9,7 +9,6 @@ def bfs(x,y) :
     que.append([x,y,count])
     visited[x][y] = False 
     while(que):
-
         x,y,count = que.popleft()
         count += 1 
         graph[x][y] = count

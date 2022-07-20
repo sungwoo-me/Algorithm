@@ -34,6 +34,7 @@ for i in range(T):
     home = list(map(int,input().split()))
     store = [list(map(int,input().split())) for _ in range(N)]
     finish = list(map(int,input().split()))
+    
     visited = [[True]*(finish[1]+1) for _ in range((finish[0]+1))]
 
     print(bfs(home[0],home[1]))

@@ -1,5 +1,6 @@
+import sys 
+input =sys.stdin.readline
 n = int(input())
-
 time = []
 
 for i in range(n):
@@ -17,3 +18,5 @@ for i in time:
         count+=1
 
 print(count)
+
+

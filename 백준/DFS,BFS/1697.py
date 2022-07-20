@@ -1,26 +1,30 @@
-import sys
-sys.setrecursionlimit(10**9)
-input = sys.stdin.readline
-def dfs(start):
-    visited[start] = False 
-    for i in graph[start] :
-        if visited[i]:
-            dfs(i)
+from collections import deque 
+
+def bfs(start):
+    que = deque()
+    que.append([start,0])
+    visited[start]= False
+    
+    while(que):
+        now,count  = que.popleft()
+        if now == K :   
+            return count
+
+        count +=1 
+        for i in range(3):
+            if i == 0 :
+                few = now+1
+            elif i==1 :
+                few = now-1
+            else :
+                few = now*2 
+
+            if 0<=few<=100000 and visited[few] : 
+                que.append([few,count])
+                visited[few] = False
 
 
-N, M = map(int,input().split())
-graph = [[] for _ in range(N+1)]
-visited = [True for _ in range(N+1)]
-count = 0 
+N,K = map(int,input().split())
+visited  = [True] * 100001
 
-for i in range(M):
-    u,v = map(int , input().split())
-    graph[u].append(v)
-    graph[v].append(u)
-
-for i in range(1,N+1):
-    if visited[i] :
-        count+=1 
-        dfs(i)
-
-print(count)
+print(bfs(N))

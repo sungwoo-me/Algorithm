@@ -8,25 +8,25 @@ def bfs(start):
         now,count =que.popleft()
         
         if now == K :
-            counts.append(count)
+            return count 
         count +=1 
 
         for i in range(3):
             if i == 0 :
                 few = now*2
             if i == 1 :
-                few = now+1
+                few = now-1
             if i == 2 : 
-                few = now-1 
-            if 0<=few<=K*2 and visited[few] :
+                few = now+1 
+            if 0<=few<=100000 and visited[few] :
                 if i == 0 :
                     que.append([few,count-1])
                 else :
                     que.append([few,count])
-    return
+                visited[few]= False
+
             
 N,K = map(int,input().split())
 visited = [True] *100001
-counts = []
-bfs(N)
-print(counts)
+
+print(bfs(N))

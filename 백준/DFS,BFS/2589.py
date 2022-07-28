@@ -14,7 +14,7 @@ def bfs(x,y):
                 que.append([nx,ny,count])
                 visited[nx][ny] = False
 
-    return count
+    return count-1
 
 N,M = map(int,input().split())
 dx = [1,-1,0,0]

@@ -25,7 +25,6 @@ for i in range(N):
 d_num = int(input())
 
 
-print(graph)
 bfs(d_num)
 for i in range(N):
     if not visited[i] :

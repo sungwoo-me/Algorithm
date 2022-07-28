@@ -1,5 +1,6 @@
 from collections import deque 
-
+import sys 
+input = sys.stdin.readline
 
 def bfs(x,y) :
     que = deque()
@@ -15,12 +16,14 @@ def bfs(x,y) :
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if 0<= nx < N and  0 <= ny< M and visited[nx][ny]   and (graph[nx][ny]==0 or ( graph[nx][ny]==1 and visited2 )) :
+            if 0<= nx < N and  0 <= ny< M and visited[nx][ny]  :
                 if graph[nx][ny] == 0 :
                     que.append([nx,ny,count,visited2])
-                else :
+                elif  graph[nx][ny]==1 and visited2 :
                     que.append([nx,ny,count,False])
                 visited[nx][ny] == False 
+
+                
 
 
     return -1

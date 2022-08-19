@@ -10,12 +10,6 @@ graph= [[1]*M for _ in range(M)]
 dx = [-1,-1,0]
 dy = [0,-1,-1]
 
-
-
-
-
-
-
 for i in range(N):
     nums = list(map(int,input().split()))
     plus = []
@@ -34,17 +28,16 @@ for i in range(N):
         num+=1
 
 
-for i in range(1,M):
-    max = 0 
-    for z in range(3):
-        nx = 1 + dx[z]
-        ny = i + dy[z]
-        if max < graph[nx][ny]:
-            max = graph[nx][ny]
-    graph[1][i]=max        
 
-    for j in range(2,M):
-        graph[j][i]=max
-
+    for j in range(1,M):
+        for k in range(1,M):
+            max = 0 
+            for z in range(3):
+                nx = j + dx[z]
+                ny =k + dy[z]
+                if max < graph[nx][ny]:
+                    max = graph[nx][ny]
+            graph[j][k]=max        
+    
 for i in graph :
     print(*i)

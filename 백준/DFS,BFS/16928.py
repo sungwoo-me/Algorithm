@@ -25,3 +25,4 @@ for i in range(N+M):
     graph[a]=b
 
 print(bfs(1))
+

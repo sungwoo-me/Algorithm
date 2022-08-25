@@ -21,10 +21,7 @@ def bfs(x,y) :
                     que.append([nx,ny,count,visited2])
                 elif  graph[nx][ny]==1 and visited2 :
                     que.append([nx,ny,count,False])
-                visited[nx][ny] == False 
-
-                
-
+                visited[nx][ny] = False 
 
     return -1
 
@@ -45,3 +42,5 @@ visited2= True
 
 
 print(bfs(Hx-1,Hy-1))
+
+# 틀렸습니다 이유 분석하기 !! 

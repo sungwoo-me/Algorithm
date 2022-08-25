@@ -10,6 +10,12 @@ graph= [[1]*M for _ in range(M)]
 dx = [-1,-1,0]
 dy = [0,-1,-1]
 
+
+
+
+
+
+
 for i in range(N):
     nums = list(map(int,input().split()))
     plus = []

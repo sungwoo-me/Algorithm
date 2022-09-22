@@ -9,7 +9,7 @@ nums = list(map(int,input().split()))
 count =0 
 
 left = 0 
-right = 1 
+right = 0
 
 
 while right < N and left < N :

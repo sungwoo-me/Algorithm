@@ -8,9 +8,9 @@ for i in range(T):
     M = int(input())
     dp = [0 for i in range(M+1)]
     dp[0] = 1 
-    for j in nums :
+    for num in nums :
         for k in range(1,M+1):
-            if k >= j :
-                dp[k] = dp[k] + dp[k-j]
+            if k >= num :
+                dp[k] = dp[k] + dp[k-num]
     
     print(dp[M])

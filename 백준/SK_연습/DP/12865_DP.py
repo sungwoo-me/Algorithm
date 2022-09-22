@@ -17,9 +17,9 @@ for i in range(1,N+1) :
         else :
             dp[i][j]=dp[i-1][j]
 
-print(graph)
+# print(graph)
 
-for i in dp :
-    print(i)
+# for i in dp :
+#     print(i)
 
 print(dp[N][K])

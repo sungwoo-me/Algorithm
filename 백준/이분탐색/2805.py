@@ -13,7 +13,7 @@ def b_search(array,target,start,end):
         if sum == target :
             return mid 
 
-        elif sum>target :
+        elif sum>= target :
             result = [sum,mid]
             start=mid+1
         

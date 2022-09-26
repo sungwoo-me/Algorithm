@@ -21,7 +21,7 @@ def bfs(x,y) :
                     que.append([nx,ny,count,True])
                     visited[nx][ny][0] = False 
                 
-                elif graph[nx][ny] == 0 and visited[nx][ny][0] and not visited2 :
+                elif graph[nx][ny] == 0 and visited[nx][ny][1] and not visited2 :
                     que.append([nx,ny,count,False])
                     visited[nx][ny][1] = False 
      

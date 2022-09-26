@@ -1,12 +1,12 @@
 n = int(input())
 nums = list(map(int,input().split()))
 
-max= 0 
-count = 0 
-for i in nums :
-    if max <i :
-        count +=1 
-        max=i
-        print(i,count)
+dp = [0 for _ in range(n)]
 
-print(count)
+for i in range(n):
+    for j in range(i):
+        if nums[i] >nums[j] and dp[i] < dp [j] :
+            dp[i] = dp[j]
+    dp[i]+=1 
+
+print(max(dp))

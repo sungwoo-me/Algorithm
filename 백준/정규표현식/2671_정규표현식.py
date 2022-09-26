@@ -4,6 +4,9 @@ import re
 # 100 뒤에 0 자유 1 뒤에 1 자유  or 01  이게 반복 !! 
 
 p = re.compile('(100+1+|01)+')
-m = p.match(input())
+m = p.fullmatch(input())
 
-print(m)
+if m : 
+    print("SUBMARINE")
+else :
+    print("NOISE")

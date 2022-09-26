@@ -5,7 +5,6 @@ nums=[0]
 [nums.append(int(input())) for _ in range(n)]
 
 
-
 if n ==1 :
     print(nums[1])
 elif n==2 :
@@ -13,6 +12,8 @@ elif n==2 :
 else:
     dp[1]=[nums[1],1]
     dp[2]=[nums[1]+nums[2],2]
+
+
 
 
     for i in range(3,n+1):
